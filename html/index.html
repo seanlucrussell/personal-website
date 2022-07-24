@@ -11,7 +11,11 @@
 </style>
 </head>
 <body>
+<script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
 <h1>SLR</h1>
 <p>The tide rises.</p>
+<button hx-get="/home.html" hx-target="#body">Home</button>
+<button hx-get="/about.html" hx-target="#body">About</button>
+<p id="body" hx-trigger="load" hx-get="/home.html"></p>
 </body>
 </html>
