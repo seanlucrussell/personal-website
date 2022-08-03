@@ -1,23 +1,17 @@
 <html>
   <head>
     <title>SLR</title>
-    <style>
-      .pane {
-        height: fill-available;
-        height: -webkit-fill-available;
-        overflow: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body style="display:flex">
     <script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
-    <div class="pane" style="float:right;flex:0.3;margin-left:20%;margin-right:1em;">
+    <div class="pane" id="left-pane" >
       <h1 style="text-align:right;">SLR</h1>
-      <h4 style="text-align:right;">I'm in Europe.</h4>
-      <button style="width:100%;text-align:right;" hx-get="/home.html" hx-target="#body">Home</button>
-      <button style="width:100%;text-align:right;" hx-get="/about.html" hx-target="#body">About</button>
+      <h4 style="text-align:right;">I'm in Europe</h4>
+      <div class="navbar-button" hx-get="/home.html" hx-target="#body">Home</div>
+      <div class="navbar-button" hx-get="/about.html" hx-target="#body">About</div>
     </div>
-    <div class="pane" style="flex:0.7;margin-right:20%;">
+    <div class="pane" id="right-pane">
       <div id="body" hx-trigger="load" hx-get="/home.html"></div>
     </div>
   </body>
