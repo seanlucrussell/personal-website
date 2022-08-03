@@ -5,11 +5,16 @@
   </head>
   <body style="display:flex">
     <script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
     <div class="pane" id="left-pane" >
-      <h1 style="text-align:right;">SLR</h1>
-      <h4 style="text-align:right;">I'm in Europe</h4>
-      <div class="navbar-button" hx-get="/home.html" hx-target="#body">Home</div>
-      <div class="navbar-button" hx-get="/about.html" hx-target="#body">About</div>
+      <div style="border-bottom:dotted;padding-bottom:0.3em;padding-top:2em;">
+        <h1>SLR</h1>
+        <h4>I'm in Europe right now! Brussels, to be exact. How crazy is that?</h4>
+      </div>
+      <div hx-target="#body" _="on htmx:afterOnLoad take .selected for event.target">
+        <div class="selected navbar-button" hx-get="/home.html">Home</div>
+        <div class="navbar-button" hx-get="/about.html">About</div>
+      </div>
     </div>
     <div class="pane" id="right-pane">
       <div id="body" hx-trigger="load" hx-get="/home.html"></div>
