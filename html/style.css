@@ -6,31 +6,126 @@
 p {
         color: #444454;
 }
-h1 {
+logo {
         font-family: futura;
-        color: #303040;
+        background-color: #303040;
+        color: white;
+        float: left;
+        margin: 0;
+        margin-right: 0.3em;
+        padding-right: 0.2em;
+        padding-left: 0.2em;
+        font-size: 180%;
 }
-h4 {
+message {
+        margin: 0;
         font-style: italic;
+        text-align: justify;
+        text-align: justify-all;
+        text-justify: inter-character;
+        font-size: 70%;
         color: #777787;
+}
+navbar {
+        display:block;
+        margin-top:.2em;
 }
 .navbar-button {
         font-family: courier;
-        width: 100%;
+        width: fill-available;
         text-align: right;
-        color: #333363;
-        padding: 0.3em 0.1em 0.3em 0.1em;
+        color: #333366;
+        padding: 0.3em 0.1em;
 }
 body {
         font-size: x-large;
+        display:flex;width:25em;margin:auto;
 }
-#left-pane {    
+left-pane {
         float: right;
-        flex: 0.3;
-        margin-left:15%;
-        margin-right:1em;
+        flex: 0.4;
+        padding-right:1em;
 }
-#right-pane {   
-        flex: 0.7;
-        margin-right:15%;
+right-pane {
+        flex: 0.6;
+}
+logo-block {
+        display:block;
+        border-bottom:dotted;
+        padding-bottom:0.3em;
+        padding-top:1.5em;
+        margin-bottom:0.3em;
+}
+interesting-stuff {
+        font-size: 70%;
+        display:block;
+        border-bottom:dotted;
+        padding-bottom:0.3em;
+        color:#222244;
+        text-align:justify;
+}
+.selected {
+        background: #222244;
+        color: white;
+}
+.selected::before {
+        content: "> ";
+}
+.navbar-button:not(.selected)::before {
+        content: "  ";
+}
+heading {
+      display:block;
+}
+@media (orientation:portrait) {
+        body {
+                font-size: 44px;
+                display: block;
+                width: 90%;
+        }
+        heading {
+                display: flex;
+                border-bottom: dotted;
+        }
+        logo-block {
+                flex:0.4;
+                padding-top: 0;
+                padding-right: .7em;
+                border-right: double #222233 .2em;
+                border-bottom: none;
+        }
+        interesting-stuff {
+                border-bottom: none;
+                padding-left:.7em;
+                flex:0.6;
+        }
+        navbar {
+                margin-top:0;
+                display: flex;
+                justify-content: space-between;
+        }
+        navbar .navbar-button + .navbar-button {
+                border-left: solid #333363;
+        }
+        .pane {
+                height: auto;
+        }
+        .navbar-button {
+                flex: 1;
+                text-align: center;
+                margin-top: 0.2em;
+                margin-bottom: 0.2em;
+                padding: 0 0.1em;
+        }
+        .selected {
+                background: #222244 content-box;
+                color: white;
+        }
+        left-pane {
+                margin-top:.3em;
+                padding-right:0;
+                float:none;
+                border-bottom:dotted;
+                display:block;
+        }
 }
