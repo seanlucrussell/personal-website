@@ -20,6 +20,7 @@ a {
 }
 message {
         margin: 0;
+        display:block;
         font-style: italic;
         text-align: justify;
         text-align: justify-all;
@@ -81,7 +82,7 @@ heading {
 }
 @media (orientation:portrait) {
         body {
-                font-size: 44px;
+                font-size: 4vmin;
                 display: block;
                 width: 90%;
         }
@@ -105,10 +106,15 @@ heading {
                 margin-top:0;
                 display: flex;
                 justify-content: space-between;
+                flex-wrap: wrap;
         }
-        navbar .navbar-button + .navbar-button {
+        .navbar-button {
                 border-left: solid #333363;
         }
+        .navbar-button:last-child {
+        
+                border-right: solid #333363;
+                }
         .pane {
                 height: auto;
         }
