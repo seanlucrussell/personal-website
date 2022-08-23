@@ -2,6 +2,7 @@
         height: fill-available;
         height: -webkit-fill-available;
         overflow: auto;
+        padding-bottom: 2em;
 }
 logo {
         font-family: futura;
@@ -31,6 +32,7 @@ message {
 navbar {
         display:block;
         margin-top:.2em;
+        margin-bottom:2em;
 }
 .navbar-button {
         font-family: courier;
@@ -40,9 +42,10 @@ navbar {
         padding: 0.3em 0.1em;
 }
 body {
-        font-size: x-large;
+        font-size: 4vmin;
         color: #444454;
-        display:flex;width:25em;margin:auto;
+        display:flex;max-width:25em;margin:auto;
+        padding: 0em 1em;
 }
 left-pane {
         float: right;
@@ -82,7 +85,6 @@ heading {
 }
 @media (orientation:portrait) {
         body {
-                font-size: 4vmin;
                 display: block;
                 width: 90%;
         }
@@ -104,6 +106,7 @@ heading {
         }
         navbar {
                 margin-top:0;
+                margin-bottom:0;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
@@ -131,6 +134,7 @@ heading {
         }
         left-pane {
                 margin-top:.3em;
+                padding-bottom:0;
                 padding-right:0;
                 float:none;
                 border-bottom:dotted;
