@@ -2,7 +2,6 @@
         height: fill-available;
         height: -webkit-fill-available;
         overflow: auto;
-        padding-bottom: 2em;
 }
 logo {
         font-family: futura;
@@ -51,9 +50,11 @@ left-pane {
         float: right;
         flex: 0.4;
         padding-right:1em;
+        padding-bottom: 3em;
 }
 right-pane {
         flex: 0.6;
+        padding-bottom: 3em;
 }
 logo-block {
         display:block;
