@@ -31,7 +31,8 @@ message {
 navbar {
         display:block;
         margin-top:.2em;
-        margin-bottom:2em;
+        border-bottom:dotted;
+        padding-bottom:0.3em;
 }
 .navbar-button {
         font-family: courier;
@@ -66,9 +67,8 @@ logo-block {
 interesting-stuff {
         font-size: 70%;
         display:block;
-        border-bottom:dotted;
-        padding-bottom:0.3em;
         color:#222244;
+        padding-top: .3em;
         text-align:justify;
 }
 .selected {
@@ -91,6 +91,7 @@ heading {
         }
         heading {
                 display: flex;
+                padding-bottom:0.3em;
                 border-bottom: dotted;
         }
         logo-block {
@@ -99,35 +100,47 @@ heading {
                 padding-right: .7em;
                 border-right: double #222233 .2em;
                 border-bottom: none;
+                padding-bottom:0;
+                margin-bottom:0;
         }
         interesting-stuff {
                 border-bottom: none;
-                padding-left:.7em;
-                flex:0.6;
         }
         navbar {
-                margin-top:0;
-                margin-bottom:0;
-                display: flex;
+                margin:0;
+                padding:0;
+                margin-left:.25em;
+                border-bottom:none;
                 justify-content: space-between;
-                flex-wrap: wrap;
+                flex:0.6;
+                background-color:#aaaacc;
+                height:fill-available;
+                display:flex;
+                justify-content:center;
+
+        }
+        navbarinner {
+                width:100%;
+                background:white content-box;
+                display:block;        
+                margin:auto;
+                padding:.3em 0;
+                
         }
         .navbar-button {
-                border-left: solid #333363;
-        }
-        .navbar-button:last-child {
-        
-                border-right: solid #333363;
-                }
-        .pane {
-                height: auto;
-        }
-        .navbar-button {
-                flex: 1;
-                text-align: center;
                 margin-top: 0.2em;
                 margin-bottom: 0.2em;
+                border-left: solid #bbbbee;
+                border-right: solid #bbbbee;
                 padding: 0 0.1em;
+        }
+        .selected {
+                border-left: solid #222244;
+                border-right: solid #222244;
+        
+        }
+        .pane {
+                height: auto;
         }
         .selected {
                 background: #222244 content-box;
